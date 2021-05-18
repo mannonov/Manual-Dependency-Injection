@@ -1,7 +1,9 @@
-package uz.jaxadev.manualdependencyinjection
+package uz.jaxadev.manualdependencyinjection.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import uz.jaxadev.manualdependencyinjection.MyApplication
+import uz.jaxadev.manualdependencyinjection.R
 import uz.jaxadev.manualdependencyinjection.viewmodel.MainViewModel
 
 class MainActivity : AppCompatActivity() {

@@ -6,16 +6,24 @@ import uz.jaxadev.manualdependencyinjection.viewmodel.MainViewModelFactory
 
 class AppContainer {
 
-    private val retrofit = Retrofit.Builder()
+    val retrofit = Retrofit.Builder()
         .baseUrl("https://mars.udacity.com")
         .build()
 
-    private val repository = MainRepository(retrofit)
+    val repository = MainRepository(retrofit)
 
     val viewModelFactory = MainViewModelFactory(repository)
 
+    var secondContainer: SecondContainer? = null
 
+}
 
+class SecondContainer(val repository: MainRepository) {
 
+    val retrofit = Retrofit.Builder()
+        .baseUrl("https://mars.udacity.com")
+        .build()
+
+    val viewModelFactory = MainViewModelFactory(repository)
 
 }
